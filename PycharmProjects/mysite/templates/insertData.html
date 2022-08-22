@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+<title>学生信息录入</title>
+</head>
+
+<body>
+<form action="/insertData/" method="POST">
+
+<div>
+<table width="400" border="0">
+  <tr>
+    <td style="text-align: right;width:120px;">学号</td>
+    <td style="text-align: left;width:180px;">    
+     <input name="txtStudentNumber" type="text" required id="txtStudentNumber">
+     </td>
+     <td style="text-align: right;width:100px;">&nbsp;</td> 
+  </tr>
+  <tr>
+    <td style="text-align: right;width:120px;">姓名</td>
+    <td style="text-align: left;width:180px;">    
+     <input name="txtStudentName" type="text" required id="txtStudentName">
+     </td>
+     <td style="text-align: right;width:100px;">&nbsp;</td> 
+  </tr>
+  <tr>
+    <td style="text-align: right;width:120px;">性别</td>
+    <td style="text-align: left;width:180px;">    
+     <input name="txtSex" type="text" required id="txtSex">
+     </td>
+     <td style="text-align: right;width:100px;">&nbsp;</td> 
+  </tr>
+  <tr>
+    <td style="text-align: right;width:120px;">年龄</td>
+    <td style="text-align: left;width:180px;">    
+     <input name="txtAge" type="text" required id="txtAge">
+     </td>
+     <td style="text-align: right;width:100px;">&nbsp;</td> 
+  </tr>
+  <tr>
+    <td style="text-align: right;width:120px;">年级</td>
+    <td style="text-align: left;width:180px;">    
+     <input name="txtGrade" type="text" required id="txtGrade">
+     </td>
+     <td style="text-align: right;width:100px;">&nbsp;</td> 
+  </tr>
+  <tr>
+    <td style="text-align: right;width:120px;">班级</td>
+    <td style="text-align: left;width:180px;">    
+     <input name="txtClass" type="text" required id="txtClass">
+     </td>
+     <td style="text-align: right;width:100px;">&nbsp;</td> 
+  </tr>
+  <tr>
+    <td style="text-align: center;width:400px;" colspan="3">
+    <input type="submit" name="btnLogin" id="btnLogin" value="录入" style="width:80px;" />
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: right;width:500px;"> 
+     {% if user %}
+        <font color="#FF0000">  {{warn}} </font>
+     {% endif %}
+   </td>
+  </tr>
+</table> 
+<br/>
+ <a href="/shows">查询信息</a>
+</div>
+</form>
+</body>
+</html>
