@@ -134,6 +134,7 @@ def show(request):
     userID = request.session.get(u'userID', '没有用户')  # 获取session的值，没有时为'没有用户'
     conn = pyodbc.connect('DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=' + DBfile)
     cursor = conn.cursor()
+
     if request.method == 'POST':  # post方法
         global bookName                                         # 书名
         global txtTime                                          # 出版时间
@@ -205,7 +206,10 @@ def show(request):
                     userID, bookName, txtTime, count)  # 提示信息:用户，书名，出版时间，记录数
         return render(request,'show.html', {'find': find, 'books': list})
     else:  # get方法
-        return render(request, 'show.html')
+        today = time.strftime('%Y-%m-%d',time.localtime(time.time()))  # 显示当前日期时间.如格式为：年-月-日 时:分:秒strftime('%Y-%m-%d %H:%M:%S')
+
+        return render(request, 'show.html',{'userID': userID, 'today': today})
+
 ### 访问"/show"，图书预约界面结束
 
 ### 以下为第3.4节任务二活动1的内容
@@ -258,12 +262,15 @@ def Borrow(request):
 ####功能：向图书数据库的图书表插入数据
 def insertbooks(request):
     if request.method == 'POST':  # post方法
-
+        types=0
         userID = request.session.get(u'userID', '')  # 获取session的值，没有时为''
         ISBN = request.POST.get('txtISBN')  # 获取输入的ISBN
         bookTitle = request.POST.get('txtBookTitle')  # 获取输入的书名
         BookAuthor=request.POST.get("txtBookAuthor")
         BookNum=request.POST.get('txtBookNum')
+        OutDate=request.POST.get('txtBookDate')
+        types=request.POST.get('txtBookType')
+        print(types)
         try:
             #### 以下为第3.3节任务二活动1连接图书数据库的内容
             conn = pyodbc.connect('DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+DBfile)
@@ -272,7 +279,7 @@ def insertbooks(request):
 
             #### 以下为第3.3节任务二活动2将图书数据插入数据库的内容
             ## sql语句（插入数据），没有检查数据的重复，即原来有此数据，会再插入一遍
-            sql = u""" insert into  [图书表]([ISBN],[书名],[数量],[作者]) VALUES  ('%s','%s','%s','%s')""" % (ISBN, bookTitle,BookNum,BookAuthor)
+            sql = u""" insert into  [图书表]([ISBN],[书名],[数量],[作者],[出版时间],[类型]) VALUES  ('%s','%s','%s','%s','%s','%s')""" % (ISBN, bookTitle,BookNum,BookAuthor,OutDate,types)
             #sql = u""" insert into  [图书表]([书名],[数量],[作者]) VALUES  ('"""+bookTitle+"""',"""+BookNum+""",'"""+BookAuthor+"""')"""
             #sql = u" insert into  [图书表]([书名],[数量],[作者]) VALUES  ('"+bookTitle+"',"+BookNum+",'"+BookAuthor+"')"
             ##以下语句是错误的写法
@@ -288,7 +295,7 @@ def insertbooks(request):
         print(sql)
         cursor.close()  # 关闭游标
         conn.close()  # 关闭数据库连接
-        return render(request,'bookinsert.html', {'warn': warn, 'user': userID})
+        return render(request,'bookinsert.html', {'warn': warn})
     else:  # get方法
         return render(request, 'bookinsert.html')
 #### 访问"/book_insert"，图书信息录入页面结束
@@ -316,10 +323,10 @@ def insertData(request):
             warn = ""  # 没有给出反馈信息
         except:  # 执行有异常时
             warn = u"数据没有录入数据库！"  # 给出"数据没有录入数据库！"的反馈信息
-
+            cursor.commit()
         cursor.close()  # 关闭游标
         conn.close()  # 关闭数据库连接
-        return render('insertData.html', {'warn': warn, 'user': studentNumber})
+        return render(request,'insertData.html', {'warn': warn, 'user': studentNumber})
     else:  # get方法
         return render(request, 'insertData.html')
 #### 访问"/insertData"，学生信息录入页面结束
@@ -350,7 +357,7 @@ def showNew(request):
         for row in list:  # 循环遍历
             book = BorrowListInfo(row[0], row[1])  # 生成图书借阅排行榜信息的book对象
             book_list.append(book)  # 将对象添加到传递到页面设计的列表
-        return render('showNew.html', {'book_list': book_list})
+        return render(request,'showNew.html', {'book_list': book_list})
     else:  # get方法
         return render(request, 'showNew.html')
 #### 访问"/showNew"，查询图书借阅界面结束
@@ -365,7 +372,7 @@ def showTime(request):
         today = time.strftime('%Y-%m-%d',
         time.localtime(time.time()))  # 显示当前日期时间.如格式为：年-月-日 时:分:秒strftime('%Y-%m-%d %H:%M:%S')
 
-        return render('showTime.html', {'userID': userID, 'today': today})
+        return render(request,'showTime.html', {'userID': userID, 'today': today})
     else:  # get方法
         userID = request.session.get(u'userID', '没有用户')  # 获取session的值，没有时为'没有用户'
         today = time.strftime('%Y-%m-%d',

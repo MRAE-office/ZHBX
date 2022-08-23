@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>学生选课系统</title>
+</head>
+
+<body>
+  <div>
+      <form action="/" method="POST">{% csrf_token %}
+            <table width="250" border="0">
+
+                <tr><td colspan="2" style="text-align: center"><h2>学生选课系统</h2></td></tr>
+                <tr><td>选课1：<input name="txtXuanke1" type="text"></td>    </tr>
+                <tr><td>选课2：<input name="txtXuanke2" type="text"></td>    </tr>
+                <tr><td>选课3：<input name="txtXuanke3" type="text"></td>  </tr>
+                <tr><td colspan="2" style="text-align: center">
+                    <input type="submit" value="查询" name="btnsubmit"></td></tr>
+            </table>
+          {{warn}}
+             <table style="width:800px;">
+              {% for list in lists %}
+              <tr>
+                  <td style="width:50px;"> {{list.姓名}}</td>
+                  <td style="width:150px;">{{list.性别}}</td>
+                  <td style="width:150px;"><span>{{list.年级}}</span> </td>
+                  <td style="width:150px;">{{list.选课}}</td>
+              </tr>
+              {% empty %}
+                  <font color="#FF0000">暂时没有数据</font>
+              {% endfor %}
+            </table>
+          </form>
+  </div>
+</body>
+
+</html>

@@ -1,66 +1,71 @@
 ﻿<!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset="utf-8">
-<title>显示日期</title>
-<style> 
+    <meta http-equiv="Content-Type" content="text/html; charset=" utf-8
+    ">
+    <title>显示日期</title>
+    <style>
 
-<!-- 
-table { 
-border-bottom-width:1px; 
-border-bottom-style:solid; 
-border-bottom-color:gray; 
-margin:0; 
-border-collapse:collapse; 
-border-spacing:0px; 
-} 
-table tr { 
-} 
-table td { 
-border-top-width:1px; 
-border-top-style:solid; 
-border-top-color:gray; 
-border-right-width:1px; 
-border-right-style:solid; 
-border-right-color:gray; 
-border-left-width:1px; 
-border-left-style:solid; 
-border-left-color:gray; 
-padding:0px;} 
---> 
-</style> 
+        <!--
+        table {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: gray;
+            margin: 0;
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        table tr {
+        }
+
+        table td {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: gray;
+            border-right-width: 1px;
+            border-right-style: solid;
+            border-right-color: gray;
+            border-left-width: 1px;
+            border-left-style: solid;
+            border-left-color: gray;
+            padding: 0px;
+        }
+
+        -->
+    </style>
 </head>
 
 <body>
 
- 
+
 <form action="/showTime/" method="POST">
-<a href="/shows">查询信息</a>
-<br /><br />
+    <a href="/shows">查询信息</a>
+    <br/><br/>
 
 
-<table  cellspacing="0" style="border-collapse:collapse;">
-  
-   
-  <table style="width: 36%;">
-  <tr>
-    <td>今天是：</td>
-    <td>    
-     {{today}}
-     </td>    
-
-  </tr>   
-   <tr>
-    <td>
-    欢迎
-    </td>
-    <td><font style='color:red; font-weight:bold;'> {{userID}}</font>使用图书借阅系统！</td>
-
-  </tr>
-  </table> 
+    <table cellspacing="0" style="border-collapse:collapse;">
 
 
-</table> 
+        <table style="width: 36%;">
+            <tr>
+                <td>今天是：</td>
+                <td>
+                    {{ today }}
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    欢迎
+                </td>
+                <td><font style='color:red; font-weight:bold;'> {{ userID }}</font>使用图书借阅系统！</td>
+
+            </tr>
+        </table>
+
+
+    </table>
 
 </form>
 </body>

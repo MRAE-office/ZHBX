@@ -1,60 +1,65 @@
 ﻿<!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset="utf-8"/>
-<title>学生借阅信息</title>
-<style> 
+    <meta http-equiv="Content-Type" content="text/html; charset=" utf-8
+    "/>
+    <title>学生借阅信息</title>
+    <style>
 
-<!-- 
-table { 
-border-bottom-width:1px; 
-border-bottom-style:solid; 
-border-bottom-color:gray; 
-margin:0; 
-border-collapse:collapse; 
-border-spacing:0px; 
-} 
-table tr { 
-} 
-table td { 
-border-top-width:1px; 
-border-top-style:solid; 
-border-top-color:gray; 
-border-right-width:1px; 
-border-right-style:solid; 
-border-right-color:gray; 
-border-left-width:1px; 
-border-left-style:solid; 
-border-left-color:gray; 
-padding:0px;} 
---> 
-</style> 
+        <!--
+        table {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: gray;
+            margin: 0;
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        table tr {
+        }
+
+        table td {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: gray;
+            border-right-width: 1px;
+            border-right-style: solid;
+            border-right-color: gray;
+            border-left-width: 1px;
+            border-left-style: solid;
+            border-left-color: gray;
+            padding: 0px;
+        }
+
+        -->
+    </style>
 </head>
 
 <body>
 
- 
+
 <form action="/showBorrow/" method="POST">{% csrf_token %}
-       <table style="width:800px;">
-      {% for book in book_list %}
-      <tr>
-         <td style="width:40px;">
-              <input type="checkbox" name="checkbox" value="{{book.ISBN}}" />
-          </td>
-          <td style="width:50px;"> {{book.编号}}</td>
-          <td style="width:150px;">{{book.学号}}</td>
-          <td style="width:150px;"><span>{{book.ISBN}}</span> </td>
-          <td style="width:150px;">{{book.借阅日期}}</td>
-      </tr>
-      {% empty %}
-          <font color="#FF0000">没有找到相应的数据</font>
-      {% endfor %}
+    <table style="width:800px;">
+        {% for book in book_list %}
+            <tr>
+                <td style="width:40px;">
+                    <input type="checkbox" name="checkbox" value="{{ book.ISBN }}"/>
+                </td>
+                <td style="width:50px;"> {{ book.编号 }}</td>
+                <td style="width:150px;">{{ book.学号 }}</td>
+                <td style="width:150px;"><span>{{ book.ISBN }}</span></td>
+                <td style="width:150px;">{{ book.借阅日期 }}</td>
+            </tr>
+        {% empty %}
+            <font color="#FF0000">没有找到相应的数据</font>
+        {% endfor %}
     </table>
     </table>
-<br />
-{{ CanceleOrder }}
-<input type="submit" name="btnCanceleOrder" id="btnCanceleOrder" value="取消预约" style="height:32px;width:72px;"  />
-<br />
+    <br/>
+    {{ CanceleOrder }}
+    <input type="submit" name="btnCanceleOrder" id="btnCanceleOrder" value="取消预约" style="height:32px;width:72px;"/>
+    <br/>
 
 </form>
 </body>
