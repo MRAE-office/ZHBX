@@ -2,6 +2,8 @@ import pyodbc    # 使用odbc连接数据库
 import datetime  # 使用日期时间
 import time      # 使用时间
 import json
+import random
+from myapp import get
 
 from django.shortcuts import render,HttpResponseRedirect,Http404,HttpResponse
 from django.http import HttpResponse, HttpResponseRedirect
@@ -83,6 +85,9 @@ def login(request):
                 ###同时验证用户名和密码
                 ###获取一条记录的访问方式
                 if list[1] == password:
+
+                    request.session['password'] = password
+
                     request.session['userID'] = studentNumber
                     return HttpResponseRedirect("/showBorrow0")
                 else:
@@ -113,8 +118,9 @@ def login(request):
             warn = u"不能连接数据库！"  # 给出"不能连接数据库！"的反馈信息
         return render(request,'login.html', {'warn': warn, 'user': studentNumber})
     else:  # get方法
-        return render(request, 'login.html')
-#### 访问"/login"，用户登录界面结束
+        n=random.randint(1,1000)
+        return render(request, 'login.html', {"background": get.get(n), "password": request.session.get(u'password', ''), "ID": request.session.get(u'userID', '')})
+#### 访问"/login"，用户登录界面结
 
 def showBorrow0(request):
     conn = pyodbc.connect('DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=' + DBfile)

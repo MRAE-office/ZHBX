@@ -3,54 +3,53 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+    <!--  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>-->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <title>学生登录</title>
 </head>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<body class="container p-1 my-sm-5 bg-dark text-white">
 
+<body style="background-image: url({{ background }})">
+<!--partial:index.partial.html -->
 <form action="" method="POST">{% csrf_token %}
+<div class="form" id="loginform">
+    <h1> Login </h1>
 
-    <div class="container mt-3 ">
-        <div class="card bg-primary text-white offset-md-4" style="width:430px">
-            <div class="card-body">
-                <div>
-                    <h3>学号:</h3>
+        <p class="user">
+            <label for="user">登录 <span>*</span>
+            </label>
+            <input class="input" name="txtStudentNumber" type="text" required id="txtStudentNumber" value={{ ID }}>
 
-                    <input name="txtStudentNumber" class="form-control" style="width:400px" type="text" required
-                           id="txtStudentNumber">
-                </div>
-                <div>
-                    <h3>密码:</h3>
+            <span class="validation req"> 这是必填栏</span>
+        </p>
+        <p class="password">
+            <label for="password">密码 <span>*</span></label>
+            <input class="input" required id="txtPassword" type="password" name="txtPassword" value={{ password }}>
 
-                    <input type="password" class="form-control" style="width:400px" name="txtPassword" required
-                           id="txtPassword">
-                </div>
+            <span class="validation req"> 这是必填栏</span>
+        </p>
+        <p class="remember">
+            <input class="checkbox" type="checkbox" id="remember" value="666" name="remember">
+            <label for="remember"> 记住我</label>
 
+        </p>
 
+        {% if user %}
+            <font color="#FF0000">  {{ warn }} </font>
+        {% endif %}
 
+        <p class="login">
+            <input type="submit" value="登录" id="btnLogin" name="btnLogin">
+        </p>
 
+</div>   </form>
+<!-- partial -->
+<script src="static/js/script.js"></script>
 
-                {% if user %}
-                    <font color="#FF0000">  {{ warn }} </font>
-                {% endif %}
-
-                <br>
-                <input type="submit" name="btnLogin" class="btn btn-info offset-md-4" id="btnLogin" value="登录">
-
-
-            </div>
-        </div>
-    </div>
-</form>
 
 <ul>
     {% for student in students %}
