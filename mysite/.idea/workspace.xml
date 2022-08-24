@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d3440af1-5779-41d0-950b-e6501d6ed875" name="默认" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>print</find>
+      <find>喀喀喀</find>
+      <find>借阅日期</find>
+      <find>insert into</find>
+      <find>图书表</find>
+    </findStrings>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/myapp/views.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-443" />
+    <option name="width" value="1400" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectId" id="1aVY0bOev5Y3eU4v8QfLGTdH00Y" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\我的文档\PycharmProjects\mysite\templates" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="mysite" type="Python.DjangoServer" factoryName="Django server">
+      <module name="mysite" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="mysite.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d3440af1-5779-41d0-950b-e6501d6ed875" name="默认" comment="" />
+      <created>1557132074622</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557132074622</updated>
+      <workItem from="1557132077548" duration="1625000" />
+      <workItem from="1557142241851" duration="987000" />
+      <workItem from="1557143559844" duration="703000" />
+      <workItem from="1557146248125" duration="1591000" />
+      <workItem from="1557472106654" duration="8344000" />
+      <workItem from="1557499737418" duration="7266000" />
+      <workItem from="1557613795357" duration="1194000" />
+      <workItem from="1557744446132" duration="1200000" />
+      <workItem from="1557793871522" duration="12039000" />
+      <workItem from="1557882863290" duration="6834000" />
+      <workItem from="1557921172673" duration="3175000" />
+      <workItem from="1558154158794" duration="3803000" />
+      <workItem from="1558223912078" duration="16486000" />
+      <workItem from="1558398814687" duration="6907000" />
+      <workItem from="1558479828745" duration="6808000" />
+      <workItem from="1558568922297" duration="13086000" />
+      <workItem from="1559691091477" duration="1781000" />
+      <workItem from="1559797178850" duration="612000" />
+      <workItem from="1559799071420" duration="2136000" />
+      <workItem from="1559817678611" duration="786000" />
+      <workItem from="1559821008148" duration="702000" />
+      <workItem from="1569137669725" duration="833000" />
+      <workItem from="1569337682985" duration="601000" />
+      <workItem from="1569587169189" duration="1473000" />
+      <workItem from="1569792076993" duration="958000" />
+      <workItem from="1569800760532" duration="659000" />
+      <workItem from="1569805309448" duration="855000" />
+      <workItem from="1569813387426" duration="1087000" />
+      <workItem from="1569834232290" duration="1441000" />
+      <workItem from="1569835715967" duration="1662000" />
+      <workItem from="1569838582019" duration="780000" />
+      <workItem from="1570062945066" duration="49000" />
+      <workItem from="1570324161076" duration="1826000" />
+      <workItem from="1570326154423" duration="1783000" />
+      <workItem from="1570330131497" duration="70000" />
+      <workItem from="1570426353402" duration="1778000" />
+      <workItem from="1570428182320" duration="2027000" />
+      <workItem from="1570430665109" duration="1767000" />
+      <workItem from="1570494380094" duration="666000" />
+      <workItem from="1570633818478" duration="1117000" />
+      <workItem from="1586652334888" duration="334000" />
+      <workItem from="1586667506501" duration="1437000" />
+      <workItem from="1586679389911" duration="1538000" />
+      <workItem from="1586733425531" duration="749000" />
+      <workItem from="1586736856471" duration="1760000" />
+      <workItem from="1586762837353" duration="127000" />
+      <workItem from="1586822016565" duration="16041000" />
+      <workItem from="1586935517508" duration="807000" />
+      <workItem from="1587011661533" duration="10474000" />
+      <workItem from="1587104478893" duration="3517000" />
+      <workItem from="1587180927845" duration="9728000" />
+      <workItem from="1587349316181" duration="10139000" />
+      <workItem from="1587431005481" duration="6809000" />
+      <workItem from="1587512806297" duration="3406000" />
+      <workItem from="1589579989674" duration="1019000" />
+      <workItem from="1589584207183" duration="1225000" />
+      <workItem from="1589586027429" duration="826000" />
+      <workItem from="1589587861921" duration="112000" />
+      <workItem from="1589587999729" duration="760000" />
+      <workItem from="1589593281805" duration="1692000" />
+      <workItem from="1589595882920" duration="1163000" />
+      <workItem from="1589697289183" duration="752000" />
+      <workItem from="1595225553676" duration="399000" />
+      <workItem from="1611132488006" duration="987000" />
+      <workItem from="1661042091588" duration="1060000" />
+      <workItem from="1661054144352" duration="125000" />
+      <workItem from="1661054544255" duration="1399000" />
+      <workItem from="1661126952925" duration="9675000" />
+      <workItem from="1661138847513" duration="38000" />
+      <workItem from="1661139724807" duration="154000" />
+      <workItem from="1661213003786" duration="8913000" />
+      <workItem from="1661222450647" duration="446000" />
+      <workItem from="1661222910055" duration="11596000" />
+      <workItem from="1661300388457" duration="13746000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1386000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-354" y="0" width="1120" height="830" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2542373" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/myapp/views.py</url>
+          <line>274</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/myapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="281" selection-start-line="281" selection-end-line="281" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
