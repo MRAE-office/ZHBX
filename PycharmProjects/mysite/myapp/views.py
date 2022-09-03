@@ -116,7 +116,8 @@ def login(request):
             ####以上为第3.4节任务一活动2中查找数据
         except:  # 执行有异常时
             warn = u"不能连接数据库！"  # 给出"不能连接数据库！"的反馈信息
-        return render(request,'login.html', {'warn': warn, 'user': studentNumber})
+        n = random.randint(1, 1000)
+        return render(request,'login.html', {"background": get.get(n),'warn': warn, 'user': studentNumber})
     else:  # get方法
         n=random.randint(1,1000)
         return render(request, 'login.html', {"background": get.get(n), "password": request.session.get(u'password', ''), "ID": request.session.get(u'userID', '')})

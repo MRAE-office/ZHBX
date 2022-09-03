@@ -37,3 +37,10 @@ form.addEventListener('blur', function (e) {
 	e.target.classList.remove('invalid');
 	validateThisField(e.target);
 }, true);
+
+     var myInput = $('#J__wcEditor');
+        if (myInput == document.activeElement) {
+           console.log('获取焦点');
+         } else {
+           console.log('未获取焦点');
+      }
