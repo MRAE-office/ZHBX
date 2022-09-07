@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=" utf-8
+    ">
+    <title>借阅排行榜信息</title>
+    <style>
+
+        <!--
+        table {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: gray;
+            margin: 0;
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        table tr {
+        }
+
+        table td {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: gray;
+            border-right-width: 1px;
+            border-right-style: solid;
+            border-right-color: gray;
+            border-left-width: 1px;
+            border-left-style: solid;
+            border-left-color: gray;
+            padding: 0px;
+        }
+
+        -->
+    </style>
+</head>
+
+<body>
+
+
+<form action="/showNew/" method="POST">{% csrf_token %}
+    <a href="/shows">查询信息</a>
+
+
+    <table cellspacing="0" style="border-collapse:collapse;">
+
+
+        <table style="width: 36%;">
+            <tr>
+                <td>借阅最多次数：</td>
+                <td>
+                    <input name="txtTopNumber" type="text" id="txtTopNumber">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="btnFind" id="btnFind" value="查找" style="width:80px;"/>
+                </td>
+                <td>&nbsp;</td>
+
+            </tr>
+        </table>
+
+        <br/><br/><br/><br/>
+
+        <table style="width:800px;">
+
+
+            {% for book in book_list %}
+
+                <tr>
+                    <td style="width:150px;"><span>{{ book.ISBN }}</span></td>
+                    <td style="width:50px;"> {{ book.count }}</td>
+                </tr>
+            {% empty %}
+                <font color="#FF0000">没有找到相应的数据</font>
+            {% endfor %}
+        </table>
+
+
+    </table>
+
+</form>
+</body>
+</html>

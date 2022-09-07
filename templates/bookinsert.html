@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html"charset="utf-8"/>
+    <title>图书信息录入</title>
+    <!-- 新 Bootstrap5 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+
+<!--  popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+
+<!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<body style="background-color:dodgerblue;"></body>
+<form action="/insertbook/" method="post">{% csrf_token %}
+         <a href="/shows" class="btn btn-info" role="button"style="position:absolute">查询信息</a>
+
+    <br> <br/>
+    <table width="400" border="0">
+          </tr>
+         <tr>
+            <td style="font-family:arial,serif;color:ghostwhite;font-size:30px;text-align: right;width:120px;">ISBN</td>
+            <td style="text-align: left;width:280px;">
+                <input name="txtISBN" type="text" required id="txtISBN">
+            </td>
+            <td style="text-align: right;width:100px;">&nbsp;</td>
+
+        <tr>
+            <td style="font-family:arial,serif;color:ghostwhite;font-size:30px;text-align: right;width:120px;">书名</td>
+            <td style="text-align: left;width:1000px;">
+                <input name="txtBookTitle" type="text" required id="txtBookTitle">
+            </td>
+            <td style="text-align: right;width:280px;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-family:arial,serif;color:ghostwhite;font-size:30px;text-align: right;width:120px;">作者</td>
+            <td style="text-align: left;width:280px;">
+                <input name="txtBookAuthor" type="text" id="txtBookAuthor">
+            </td>
+            <td style="text-align: right;width:280px;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-family:arial,serif;color:ghostwhite;font-size:30px;text-align: right;width:120px;">类型</td>
+            <td style="text-align: left;width:280px;">
+                <select name=txtBookType>
+                    <option value="小说">小说</option>
+                    <option value="历史">历史</option>
+                    <option value="人物传记">人物传记</option>
+                    <option value="计算机">计算机</option>
+                </select>
+
+            </td>
+            <td style="text-align: right;width:100px;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-family:arial,serif;color:ghostwhite;font-size:25px;text-align: right;width:120px;">出版时间</td>
+            <td style="text-align: left;width:340px;">
+                <input name="txtBookDate" type="date" id="txtBookDate">
+
+            </td>
+            <td style="text-align: right;width:100px;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-family:arial,serif;color:ghostwhite;font-size:30px;text-align: right;width:120px;">数量</td>
+            <td style="text-align: left;width:280px;">
+                <input name="txtBookNum" type="text" id="txtBookNum">
+            </td>
+            <td style="text-align: right;width:100px;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;width:400px;" colspan="3">
+                <input type="submit" name="btnInput" id="btnInput" value="录入" style="button" class="btn btn-primary"></button>
+            </td>
+
+        </tr>
+        <tr>
+            <td style="text-align: right;width:500px;">
+                <font color="#FF0000">  {{ warn }} </font>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
+
+

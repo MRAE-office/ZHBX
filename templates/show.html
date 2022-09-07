@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+<title>图书管理系统</title>
+<style>
+
+<!--
+table {
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:gray;
+margin:0;
+border-collapse:collapse;
+border-spacing:0px;
+}
+table tr {
+}
+table td {
+border-top-width:1px;
+border-top-style:solid;
+border-top-color:gray;
+border-right-width:1px;
+border-right-style:solid;
+border-right-color:gray;
+border-left-width:1px;
+border-left-style:solid;
+border-left-color:gray;
+padding:0px;}
+-->
+</style>
+</head>
+
+<body>
+欢迎{{ warns }}登录图书管理系统！！
+   <br />
+<form action="/shows/" method="POST">{% csrf_token %}
+<a href="/showBorrow">借阅信息查询</a>
+      <br /><br />
+<a href="/insertData">学生信息录入</a>
+<a href="/insertbook">图书信息录入</a>
+  <br />  <br />
+<a href="/showNew">借阅排行榜查询</a>
+<a href="/showTime">显示当前日期</a>
+  <br />  <br />
+
+
+<table  cellspacing="0" style="border-collapse:collapse;">
+   <table style="width:800px;">
+      {% for book in borrow_list %}
+      <tr>
+          <td style="width:50px;"> {{book.编号}}</td>
+          <td style="width:150px;">{{book.学号}}</td>
+          <td style="width:150px;"><span>{{book.ISBN}}</span> </td>
+          <td style="width:150px;">{{book.借阅日期}}</td>
+      </tr>
+      {% empty %}
+          <font color="#FF0000">没有找到相应的数据</font>
+      {% endfor %}
+    </table>
+
+</table> 
+
+</form>
+
+  <br />
+
+  {{find}}
+
+
+<form action="/shows/" method="POST" name="form2">{% csrf_token %}
+<br />
+
+<table style="width: 36%;">
+  <tr>
+    <td>书名</td>
+    <td>
+     <input name="txtBookName" type="text"  id="txtBookName">
+     </td>
+  </tr>
+  <tr>
+    <td>出版时间</td>
+    <td>
+     <input name="txtTime" type="text"  id="txtTime">
+     </td>
+  </tr>
+  <tr>
+    <td>
+    <input type="submit" name="btnFind" id="btnFind" value="查找" style="width:80px;" />
+    </td>
+    <td>{{ bookname }}</td>
+  </tr>
+  </table>
+  <br />
+    <table  cellspacing="0" style="border-collapse:collapse;">
+        <table style="width:800px;">
+      {% for book in books %}
+      <tr>
+          <td style="width:50px;">
+              <input type="checkbox" name="checkbox" value="{{book.ISBN}}" />
+          </td>
+          <td style="width:150px;"><span>{{book.ISBN}}</span> </td>
+          <td style="width:150px;">{{book.作者}} </td>
+          <td style="width:150px;">{{book.书名}} </td>
+          <td style="width:150px;">{{book.类型}}</td>
+          <td style="width:150px;">{{book.出版时间}}</td>
+          <td style="width:150px;">{{book.数量}}</td>
+      </tr>
+      {% empty %}
+          <font color="#FF0000">没有找到相应的数据</font>
+      {% endfor %}
+    </table>
+</table>
+<br />
+<input type="submit" name="btnOrder" id="btnOrder" value="预约" style="height:32px;width:72px;"  />
+<br />
+<br />
+</div>
+</form>
+</body>
+</html>
